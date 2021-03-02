@@ -1,2 +1,8 @@
 <h1>Sherwood Wildlife</h1>
 <p>Welcome to the Sherwood Forest Service. Here you can find the list of animals that live in the Forest.</p>
+
+<ul>
+  <% @animals.each do |animal| %>
+    <li><%= link_to animal.name, animal %></li>
+  <% end %>
+</ul>
