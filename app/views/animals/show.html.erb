@@ -1,0 +1,15 @@
+<h1><%= @animal.name %> (<em><%= @animal.binomial_name %></em>)</h1>
+
+<h2>Info</h2>
+
+<p>
+The <%= @animal.name %> is a <%= @animal.animal_class %>
+</p>
+
+<h2>Options</h2>
+<ul>
+  <li><%= link_to "Edit", edit_animal_path(@animal) %></li>
+  <li><%= link_to "Destroy", animal_path(@animal),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %></li>
+</ul>
