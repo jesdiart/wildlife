@@ -12,4 +12,5 @@ The <%= @animal.name %> is a <%= @animal.animal_class %>
   <li><%= link_to "Destroy", animal_path(@animal),
                   method: :delete,
                   data: { confirm: "Are you sure?" } %></li>
+  <li><%= link_to "Back to animals", animals_path %></li>
 </ul>
