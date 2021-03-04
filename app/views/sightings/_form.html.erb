@@ -8,6 +8,10 @@
     <%= form.datetime_local_field :date %>
   </p>
   <p>
+    <%= form.label :region %><br>
+    <%= form.select  :region_id, @regions.collect { |region| [region.name, region.id] } %>
+  </p>
+  <p>
     <%= form.label :latitude %><br>
     <%= form.number_field :latitude, in: -90.0..90.0, step: :any %>
   </p>
