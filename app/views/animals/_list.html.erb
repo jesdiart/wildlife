@@ -1,0 +1,9 @@
+<p>Here you can find the list of animals that live in the Forest.</p>
+
+<ul>
+  <% animals.each do |animal| %>
+    <li><%= link_to animal.name, animal %></li>
+  <% end %>
+</ul>
+
+<%= link_to "Add new Animal", new_animal_path %>
