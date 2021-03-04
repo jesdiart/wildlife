@@ -29,6 +29,14 @@
   </div>
 
   <div>
+    <%= form.label :image_url %><br>
+    <%= form.url_field :image_url %><br>
+    <% animal.errors.full_messages_for(:body).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
     <%= form.submit %>
   </div>
 <% end %>

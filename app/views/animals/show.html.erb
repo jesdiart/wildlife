@@ -1,6 +1,9 @@
 <h1><%= @animal.name %> (<em><%= @animal.binomial_name %></em>)</h1>
 
 <h2>Info</h2>
+<% unless @animal.image_url.nil? %>
+  <img src="<%= @animal.image_url %>" alt="<%= @animal.name %>" width="300px" style="float:right; margin-right: 100px;">
+<% end %>
 <p>The <%= @animal.name %> is a <%= @animal.animal_class %></p>
 <p><%= @animal.description %></p>
 
