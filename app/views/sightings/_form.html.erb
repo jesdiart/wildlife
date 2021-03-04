@@ -1,0 +1,21 @@
+<%= form_with model: [ @animal, @animal.sightings.build ] do |form| %>
+  <p>
+    <%= form.label :spotter %><br>
+    <%= form.text_field :spotter %>
+  </p>
+  <p>
+    <%= form.label :date %><br>
+    <%= form.text_field :date %>
+  </p>
+  <p>
+    <%= form.label :latitude %><br>
+    <%= form.text_field :latitude %>
+  </p>
+  <p>
+    <%= form.label :longitude %><br>
+    <%= form.text_field :longitude %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

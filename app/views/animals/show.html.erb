@@ -4,11 +4,20 @@
 <p>The <%= @animal.name %> is a <%= @animal.animal_class %></p>
 <p><%= @animal.description %></p>
 
+<h2>Sightings (<%= @animal.sightings.count%>)</h2>
+<% if @animal.sightings.empty? %>
+  <p>No sightings</p>
+<%else %>
+  <%= render @animal.sightings %>
+<% end %>
+
 <h2>Options</h2>
 <ul>
+  <li><%= link_to "Add a sighting", new_animal_sighting_path(@animal) %></li>
   <li><%= link_to "Edit", edit_animal_path(@animal) %></li>
   <li><%= link_to "Destroy", animal_path(@animal),
                   method: :delete,
                   data: { confirm: "Are you sure?" } %></li>
   <li><%= link_to "Back to animals", animals_path %></li>
 </ul>
+

@@ -1,0 +1,20 @@
+<p>
+  <strong>Spotter:</strong>
+  <%= sighting.spotter %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= sighting.date %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  (<%= sighting.latitude %>, <%= sighting.longitude %>)
+</p>
+
+<p>
+  <%= link_to 'Remove Sighting', [sighting.animal, sighting],
+              method: :delete,
+              data: { confirm: "Are you sure?" } %>
+</p>
