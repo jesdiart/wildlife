@@ -1,0 +1,13 @@
+<h1><%= @region.name %></h1>
+
+<%= @region.name %>
+
+<h2>Options</h2>
+<ul>
+  <li><%= link_to "Edit", edit_region_path(@region) %></li>
+  <li><%= link_to "Destroy", region_path(@region),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %></li>
+  <li><%= link_to "Back to regions", regions_path %></li>
+</ul>
+

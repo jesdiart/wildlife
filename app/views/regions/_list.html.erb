@@ -1,0 +1,9 @@
+<p>Here you can find the list of regions of the Forest.</p>
+
+<ul>
+  <% regions.each do |region| %>
+    <li><%= link_to region.name, region %></li>
+  <% end %>
+</ul>
+
+<%= link_to "Add new Region", new_region_path %>
