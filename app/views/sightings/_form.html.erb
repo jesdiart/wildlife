@@ -9,11 +9,11 @@
   </p>
   <p>
     <%= form.label :latitude %><br>
-    <%= form.text_field :latitude %>
+    <%= form.number_field :latitude, in: -90.0..90.0, step: :any %>
   </p>
   <p>
     <%= form.label :longitude %><br>
-    <%= form.text_field :longitude %>
+    <%= form.number_field :longitude, in: -180.0..180.0, step: :any %>
   </p>
   <p>
     <%= form.submit %>
