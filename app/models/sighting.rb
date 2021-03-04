@@ -1,5 +1,6 @@
 class Sighting < ApplicationRecord
   belongs_to :animal
+  belongs_to :region
 
   validates :spotter, presence: true
   validates :date, presence: true
