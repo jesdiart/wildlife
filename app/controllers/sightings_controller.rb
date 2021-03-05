@@ -23,7 +23,7 @@ class SightingsController < ApplicationController
   end
 
   def search
-    @sightings = Sighting.where(date: params[:from]..params[:to])
+    @sightings = Sighting.where(date: params[:from]..params[:to]).sort_by(&:date)
   end
     
   private
