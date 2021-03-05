@@ -2,6 +2,13 @@
 
 <%= @region.description %>
 
+<h2>Sightings (<%= @region.sightings.count%>)</h2>
+<% if @region.sightings.empty? %>
+  <p>No sightings</p>
+<%else %>
+  <%= render @region.sightings %>
+<% end %>
+
 <h2>Options</h2>
 <ul>
   <li><%= link_to "Edit", edit_region_path(@region) %></li>
