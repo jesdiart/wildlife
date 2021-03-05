@@ -21,6 +21,10 @@ class SightingsController < ApplicationController
       render :show
     end
   end
+
+  def search
+    @sightings = Sighting.where(date: params[:from]..params[:to])
+  end
     
   private
     def sighting_params

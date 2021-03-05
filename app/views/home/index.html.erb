@@ -11,4 +11,12 @@
   <h2>Sightings</h2>
   <h3>Last sightings</h3>
   <%= render "sightings/list", sightings: @last_sightings %>
+  <h3>Sightings reports</h3>
+  <%= form_with url: "sightings/search", method: :get do |form| %>
+    <%= form.label :from %>
+    <%= form.datetime_local_field :from %>
+    <%= form.label :to %>
+    <%= form.datetime_local_field :to %>
+    <%= form.submit "Search" %>
+  <% end %>
 </div>

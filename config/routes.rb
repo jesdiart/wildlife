@@ -7,4 +7,7 @@ Rails.application.routes.draw do
 
   resources :regions
 
+  resources :sightings do
+    get 'search', on: :collection
+  end 
 end
