@@ -4,8 +4,11 @@
 <div style="float:left; width:50%;">
   <h2>Animals</h2>
   <%= render "animals/list", animals: @animals %>
-</div>
-<div style="float:left; width:50%;">
   <h2>Regions</h2>
   <%= render "regions/list", regions: @regions %>
+</div>
+<div style="float:left; width:50%;">
+  <h2>Sightings</h2>
+  <h3>Last sightings</h3>
+  <%= render "sightings/list", sightings: @last_sightings %>
 </div>
